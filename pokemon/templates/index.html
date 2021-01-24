@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login/Registration</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style1.css' %}">
+</head>
+<body>
+    <h1>Welcome! Sign in to create to team!</h1>
+    <div id="container">
+        {% if messages %}
+            <div id='errors'>
+                {% for message in messages %}
+                    <p>- {{message}} -</p>
+                {% endfor %}
+            </div>
+        {% endif %}
+    </div>
+    <div id="wrapper">
+        <div class="box1">
+            <h1>Register</h1>
+            <form action="/register" method="POST">
+                {% csrf_token %}
+                <p>First Name: <input type="text" name='first_name'></p>
+                <p>Last Name: <input type="text" name='last_name'></p>
+                <p>Username: <input type="text" name='username'></p>
+                <p>Email: <input type="text" name='email'></p>
+                <p>Password: <input type="password" name='password'></p>
+                <p>Confirm Password: <input type="password" name='confirm_password'></p>
+                <input class="button1" type="submit" value="Create User">
+            </form>
+        </div>
+        <div class="box2">
+            <h1>Login</h1>
+            <form action="/login" method="POST">
+                {% csrf_token %}
+                <p>Username: <input type="text" name="username"></p>
+                <p>Password: <input type="password" name="password"></p>
+                <input class="button2" type="submit" value="Login">
+            </form>
+        </div>
+    </div>  
+</body>
+</html>

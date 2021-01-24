@@ -1,0 +1,54 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+#topbox {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+    margin-bottom: 20px;
+}
+
+#topbox > a { 
+    padding: 10px;
+    margin-right: 50px;
+}
+
+#container {
+    background-image: url(https://images.wallpapersden.com/image/download/pokemon-pikachu-art_a25tbW6UmZqaraWkpJRpbWWtaW1p.jpg);
+    background-size: 460px 250px;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    border: 1px solid black;
+    width: 450px;
+    margin: 10px;
+    padding: 5px;
+}
+
+#container > form {
+    display: inline-block;
+    text-align: center;
+}
+
+#container > form > input{
+    text-align: center;
+}
+
+#container > form > p {
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+#container > form > p > label{
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#container > a {
+    margin-left: 125px;
+    padding: 5px;
+}

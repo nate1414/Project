@@ -1,0 +1,91 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+h1 {
+    margin: 20px;
+    padding: 10px;
+}
+
+#container {
+    margin: 0px 0px 10px 40px;
+}
+
+#container > #errors > p{
+    padding: 5px;
+}
+
+#wrapper {
+    width: 1000px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+}
+
+.box1 {
+    width: 400px;
+    display: inline-block;
+    border: 2px solid black;
+    margin: 10px;
+    padding: 10px;
+}
+
+.box2 {
+    width: 400px;
+    display: inline-block;
+    border: 2px solid black;
+    margin: 10px;
+    padding: 10px;
+}
+
+.box1 > h1 {
+    width: 332px;
+    text-align: center;
+    margin: 10px;
+    padding: 0px;
+}
+
+.box1 > form > p {
+    display: inline-block;
+    margin: 10px;
+    align-items: center;
+    text-align: right;
+    width: 332px;
+}
+
+.box1 > form > p > input{
+    align-self: center;
+    display: inline-block;
+    width: 200px;
+}
+
+.box1 > form > .button1 {
+    margin: 10px;
+    position: relative;
+    right: -250px;
+    padding: 3px;
+}
+
+.box2 > h1 {
+    width: 332px;
+    text-align: center;
+    margin: 10px;
+    padding: 0px;
+}
+
+.box2 > form > p {
+    display: inline-block;
+    margin: 10px;
+    align-items: center;
+    text-align: right;
+    width: 280px;
+}
+
+.box2 > form > .button2 {
+    margin: 10px;
+    position: relative;
+    right: 65px;
+    bottom: -90px;
+    padding: 3px;
+}

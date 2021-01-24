@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style4.css' %}">
+</head>
+<body>
+    <div id="topbox">
+        <h1>You are editing your post, {{ user.username }}! </h1>
+        <a href="/logout">Logout</a>
+    </div>
+    {% if messages %}
+    <div id='errors'>
+        {% for message in messages %}
+            <p>- {{message}} -</p>
+        {% endfor %}
+    </div>
+    {% endif %}
+    <div id="container">
+        <form action="/main/edit/{{ pokemon.id }}/update" method="POST">
+            {% csrf_token %}
+            <p>
+                <label for="pokemon_n">Pokémon Name: </label>
+                <input type="text" name="pokemon">
+            </p>
+            <p>
+                <label for="types">Pokémon Type (1-2 max):</label>
+                <input type="text" name="types">
+            </p>
+            <p>
+                <label for="description">Pokémon Description:</label>
+                <input type="description" name='desc'>
+            </p>
+            <input type="submit" name="Edit">
+        </form>
+        <a href="/main">Cancel</a>
+    </div>
+</body>
+</html>
