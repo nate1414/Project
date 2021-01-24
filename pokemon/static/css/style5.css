@@ -1,0 +1,42 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+#topbox {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px;
+    
+}
+
+#topbox > a { 
+    padding: 10px;
+    margin-right: 50px;
+}
+
+#container1 {
+    margin: 30px;
+    padding: 10px;
+    border: 1px solid black;
+    width: 350px;
+    background-color: lightblue;
+}
+
+#container1 > h2 {
+    margin: 3px;
+    padding: 3px;
+}
+
+#container2 {
+    margin: 30px;
+    padding: 10px;
+    border: 1px solid black;
+    width: 350px;
+    background-color: lightblue;
+}
+
+#container2 > h2 {
+    margin: 3px;
+    padding: 3px;
+}

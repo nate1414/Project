@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Hub</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles2.css' %}">
+</head>
+<body>
+    <div>
+        {% if messages %}
+            <div id='errors'>
+                {% for message in messages %}
+                    <p>- {{message}} -</p>
+                {% endfor %}
+            </div>
+        {% endif %}
+    </div>
+    <div id="topbox">
+        <h1>Hello, {{ user.username }}!</h1>
+        <a href="/logout">Logout</a>
+    </div>
+    <div id="wrapper">
+        <div class="createbox">
+            <h1>User's new pokemon ideas!</h1>
+            <a href="/main/new">Create your Pokemon</a>
+        </div>
+        {% for pokemon in pokemons %}
+            <div class="box1">
+                <p>Pokemon: {{ pokemon.pokemon }}</p>
+                <p>Types: {{ pokemon.types }}</p>
+                <p>Description: {{ pokemon.desc }}</p>
+                <p>Created By: <a href="/user/{{ pokemon.creator.id }}">{{pokemon.creator.username}}</a></p>
+                {% if user.id == pokemon.creator.id %}
+                    <a href="/main/edit/{{pokemon.id}}">Edit</a> | <a href="/main/remove/{{pokemon.id}}">Delete</a>
+                {% endif %}
+            </div>
+            <div class="box2">
+                <a href="/like/{{pokemon.id}}">Like</a>
+                <p><a href="/likedstatus/{{ pokemon.id }}">{{pokemon.user_likes.count}} people</a> like this.</p>
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>

@@ -1,0 +1,84 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+h1 {
+    color: black;
+}
+
+#topbox {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 10px 10px 15px;;
+    padding: 5px;
+}
+
+#topbox > h1 {
+    font-size: 40px;
+}
+
+#topbox > a { 
+    padding: 10px;
+    margin-right: 50px;
+}
+
+#wrapper {
+    display: inline-block;
+    width: 1000px;
+    margin: 10px;
+}
+
+#wrapper > .createbox {
+    display: inline-block;
+    margin: 10px;
+    font-size: 20px;
+}
+
+#wrapper > .createbox > h1{
+    color: black;
+    margin: 5px 0px 15px 0px;
+}
+
+#wrapper > .box1 {
+    width: 400px;
+    margin: 10px 0px 15px 10px;
+    text-align: left;
+    border: 1px solid black;
+    padding: 5px;
+    font-size: 17px;
+    background-color: lightblue;
+}
+
+#wrapper > .box1 > p {
+    margin: 5px;
+    padding: 5px;
+}
+
+#wrapper > .box1 > a {
+    margin: 5px;
+    padding: 5px;
+}
+
+#wrapper > .box2 {
+    width: 400px;
+    margin: 10px 0px 15px 10px;
+    text-align: left;
+    padding: 5px;
+    font-size: 17px;
+}
+
+#wrapper > .box2 > p {
+    display: inline;
+    text-align: right;
+    margin-left: 50px;
+}
+
+#wrapper > .box2 > a {
+    display: inline;
+    text-align: right;
+}
+
+#wrapper > .box2 > form {
+    margin-top: 10px;
+}

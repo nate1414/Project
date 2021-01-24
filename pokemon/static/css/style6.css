@@ -1,0 +1,56 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+#topbox {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+#topbox > a { 
+    padding: 10px;
+    margin-right: 50px;
+}
+
+.wrapper {
+    margin: 20px;
+    padding: 10px;
+}
+
+.wrapper > .username > p {
+    margin: 5px;
+    font-size: 20px;
+}
+
+.box1 {
+    display: inline-block;
+    width: 400px;
+    border: 1px solid black;
+    margin: 10px;
+    padding: 5px;
+    background-color: lightblue;
+    font-size: 17px;
+}
+
+.box1 > p {
+    padding: 5px;
+}
+
+#container {
+    border: 1px solid black;
+    width: 300px;
+    margin: 40px;
+    padding: 10px;
+    background-color: lightblue;
+    font-size: 17px;
+}
+
+#container > table > tbody > tr > td {
+    padding: 5px;
+}
+
+h2 {
+    margin: 20px;
+}

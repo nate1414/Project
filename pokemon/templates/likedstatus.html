@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Like Status</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style6.css' %}">
+</head>
+<body>
+    <div id="topbox">
+        <h1>Post:</h1>
+        <a href="/main">New Pokemon Ideas</a>
+        <a href="/logout">Logout</a>
+    </div>
+    <div class="wrapper">
+        {% for pokemon in pokemons %}
+            <div class="username">
+                <p><a href="/user/{{ pokemon.creator.id }}">{{ pokemon.creator.username }}</a> created:</p>
+                </div>
+                <div class="box1">
+                    <p>Pokemon: {{ pokemon.pokemon }}</p>
+                    <p>Types: {{ pokemon.types }}</p>
+                    <p>Description: {{ pokemon.desc }}</p>
+                </div>
+        {% endfor %}
+    </div>
+    <h2>People who liked this post:</h2>
+    <div id="container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Username</th>
+                    <th>Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for pokemon in user.user_pokemon.all %}
+                    <tr>
+                        <td><a href="/user/{{ pokemon.creator.id }}">{{ user.username }}</a></td>
+                        <td>{{ user.full_name }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
